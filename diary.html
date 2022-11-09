@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/diary.css">
+</head>
+<body>
+    <div id="navbar">
+        <div id="logo">
+            <img src="https://cdn1.cronometer.com/logos/cronometer-logo-orange.png" alt="" id="icon">
+        </div>
+        <ul id="navArea">
+            <li>Diary</li>
+            <li>Trends</li>
+            <li>Foods</li>
+            <li>Settings</li>
+            <li><a href="plans.html" style="text-decoration:none;color:rgb(225, 95, 44)">Plans</a></li>
+            <li><a href="help.html" style="text-decoration:none;color:rgb(225, 95, 44)">Help</a></li>
+        </ul>
+    </div>
+    <div id="container">
+         <div id="child1">
+            <div id="calendar"></div>
+            <div id="ad"></div>
+            <div id="energychart"></div>
+            <div id="weightchart"></div>
+         </div>
+
+
+         <div id="child2">
+            <div id="add">
+                <div id="buttondiv">
+                    <button class="addbutton">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAbCAYAAABm409WAAABoklEQVR4XrVWwU7CQBDtJ/AJfAJ/YJPuht2YKAcPWkzsxdKb3D3I3UT5BM62Bm56k8QPgHtL6h/AH+BM29V2thgqyyQvlJnZebPTmQHLqhE/7A8HUf9DwY+uesrmTb0W2J/90F0A5qVj+8sgdGcQeFtG8Op6wfSyPYjcVOn+TRCE1zYl8KP+uriRCr4BsjE9u7cUZaqQlLDEUtEzjeX2xe1ApiMkgxtMFAGWi/o2kpTzTtxl54lwbvAZdeX3gtmntt1KJT9ZdfkdfuJ3GkeTRDq9WPJFIvm2AsHTd//07fHpYjG5P/tMJJtqPpKtV4I97CRaSTbUDzUHJqiRYObU8RAgSZVAsA11OhRYkSI496jRCOC9qexnmtEQsg6MBV9Sgzk4PUtXmkMs2OioBNmLhgH5ogZTgBvYFvTsnBpMISOAhzE1mELepoanWAErU8zxcSYZB/iXwHSZIOHKwkuF3dacDoP+U4rKGsfmoNkrQaWJmfjZonWCfUsPNAIsThpTk7/X9+4b4tKsLU2d4E3Uls0mvdxyVv6nAHSTvL0z0vGu4N8O/opsvXoX7wAAAABJRU5ErkJggg==" alt="" class="addbtnimage">
+                        <span>ADD FOOD</span>
+                    </button>
+                    <button class="addbutton">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAbCAYAAABiFp9rAAABtElEQVR4Xq1W61HDMAzOCIzQEdgARnA26AawAWwAv5uUdoOyAWzQbkAuzl1/lg2oJNuJLT/iOnx3uqaxrE8vy6mqBRC780q08iDa/gLyA89PXGcxxO5yJxp5rFv5Z4tohmeuuwhA8shJFJE8ct1FgFQJTqKl47pZwBTVH/LByPT+vKqb/pcTQZ3e7f2zMIXmhrSxA6aOorLJmv4THVP7sYb9m/kfhNgOa248JESIDiEp/I771TtqFOrGzXBvmddKIZJGfivxUzUSbuULiW53Zx1scp4KFrqJYEoFArx85SRJAceCJAZkECJw3lHNXE9TArp7O53ZwOi4MS2nsU5wWFW9Eg2QQuxwkuewxvWLUdt1swWi5LrFiDYAFrqkBiGkGgAd4PrFwM7hBFq6ooJjr/M0pBpARTQzXjhwPIQ2w/+TZRifvYZQF17mZUejxd/sDFMzq9RB9sdQVr10ijxvJ2J37Oub1SEk53LTiKc64G206HRPuWR7rhMFeQsRjJtnTj0/Y3P6Huj8pKauBYzaSvMXX/838G+HXAeLYHcu3aiRui4GfaiYqHAG3lqrW4BNRBKJ5grd7Oe2o+DGBQAAAABJRU5ErkJggg==" alt="" class="addbtnimage">
+                        <span>ADD EXERCISE</span>
+                    </button>
+                    <button class="addbutton">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAbCAYAAACAyoQSAAAB60lEQVR4XrVW3W3CMBBmhI7QEToCDyTqIyOwQbtBkK0+lw3KBu0G7QZkg6IEiUe6QXuf7TPO2YlDCid9IrJ9/u7fzGZC2oWet6V+bwp1ot/fplTf9P2GdXmW5TSv7tpCPxE+oWNQ6B39VsfH6l6e9+IUz0oJkAGvUu9QvDzAMHnW65Dxh0KtpB4TwrJISQJes54hdBHJISImwo08NAQQX0LodE4+1PiQB8ZgKKR9aEq9neTlf4FUEqn6khs3BbogWhwLMpbCtYzW81hPJuVqbEtVy70MppNyJeISuZfBOp9TKrQ4jKrmykfrRDoDwF3Z6mWPmkL/+HXSQRVyC3T2MjDVO2Qp9eIHLjUX0zev29Gnl2h4u6e3Xq/QexO9JPSG74O3e0loSfUSBCaMC/Vs1sirkIgN4D3jyRgxUwmviwD2cDkqlSMShdSFOvxOj0dbBx1x1lYh8KpIotAAR7TDHsJnC0utYkIbkQ4hBAp9BYE5izPIq/Oq0ybQ9S2USlWYSylxa3Qv5pDLgcCDIu2lqrN57lRi4mKfvwBc5dLLiworRcx5TXtj30tJmMzjkEjiMK+SUMLUxsB/qkFJEUsCiUkeSsmNyasTsvTlsYsRVXqpIEf9fay3VydksS/LuZB4QslzNxE7/FU9NX9/tgR0Z1Ljx18AAAAASUVORK5CYII=" alt="" class="addbtnimage">
+                        <span>ADD BIOMETRIC</span>
+                    </button>
+                    <button class="addbutton">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAABC0lEQVR4Xs2WTQqCQBiGbd8InaHu0L4LBJ2lVRC0ySxadxB15SpoUVeYFq0Ko72OaDbNICWMmn/fkC88oI4zz+YVP4VSpUOs7tw10N0zVVoXYqGZUhTXRJq4sS6FQiZzxE1V8I9j6lm95JmBpqLjG7YYiQdUIbzs6NMxygkhZDylhFCyUkJIWaEQWvZT6JnoJR5QhSwZT6ZQloxHFDaW+acJDfEqF/8wgpNV4X+yAOs0OG/ACLEmypIb8ESkJbKAtSfAazBCvMyXyeZ/srhF28YQe5AS8dZLKQjZD1sm4x9h3MhmELtfLJMLkzWdF0tjoBv/U+upBQm4prpQ+ETML9j8+BBfgAFdP2PBG9XdDDHqbQnFAAAAAElFTkSuQmCC" alt="" class="addbtnimage">
+                        <span>ADD NOTE</span>
+                    </button>
+                </div>
+               
+                <div id="threedots">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAABaklEQVR4Xu3azU3DQBAG0LlxoQXIhRKhBkQJUASUACVAJwgJceLHI+VCVpGdeM0Y6T3pk1DivcxhY3a/CAAAAAAAgPU5G3I15GnI6zb5d36W37GQ0yEPQ76GfO9JfpfP5LN0dDLkJdqB70s+m2vo5C7aIY8l19DBxZDPaAc8llyTa5npOtrhTk2uZabnaAc7NflbwEwf0Q52at6D2d6iHezU5FpmsgUVu4l2sFOTa5lpE8e/hp4HXdxGO+Cx+EesozxWOOS3wFHEAvKA7T7GD+PyGYdxC8p9/TJ+H0c/bj+z5wMAACxAL6iIXlAhvaBiekGF9IKK6QUVO+QiZjcu5TvQCyqmF1TMFlRML6jYJo5/DXVH3IleUDG9oBXQC1oJvSAAAIA/phdURC+okF5QMb2gQnpBxfSCih1yEbMbl/Id6AUV0wsqZgsqphdUbBPHv4a6I+5EL6iYXtAK6AWthF4QAAAAAADwr/wAXpVUQUN5zAgAAAAASUVORK5CYII=" alt="" id="doticon">
+                </div>
+            </div>
+
+            <!-- description -->
+
+            <div id="description">
+                <table id="destable">
+                    
+                    <th>
+                        <td>
+                            <div>Description</div>
+                        </td>
+                        <td>Amount</td>
+                        <td>Unit</td>
+                        <td>Energy(kcal)</td>
+                    </th>
+                </table>
+            </div> 
+
+            <!-- Energy Summary -->
+            <div id="energydiv">
+                <div id="energysum"></div>
+                <div id="macro"></div>
+            </div>
+
+
+            <!-- nutrients -->
+            <div id="nutrients">
+
+                <!-- nutrition target -->
+                <div id="target">
+                    <div id="nuttarget">Nutrition Targets</div>
+                    <div id="suggest">
+                        <div id="food">
+                            <button> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAA2CAYAAAC4PKvBAAAEF0lEQVR4Xu2ZTUgVURTHp1bqmzup9LEy2rSTFu3CpEUR6KaIAm1TEVTQNspN9LWIMihoEQRBkG6CUO88MtE+NAwqyj4pCStrEYXl55t5z6/bObd8OeeOOe/OvKeCf/jhY8659/7fnTvn3jcaRkiJuFGUtK3KBLdOO7bV5nBrCP4KD3AtYVutkHMqya0K0Woso/3kRKLFiCXi5gHHZh2KycCwey5n+8V9w6T9Ry4YJM/h7AjM3k/ViB6yL85qsG86XiRymlgZ3PIPdODIwL5hDDqutoQwlsKsnIFZmVAGixw2ic8BjLmE+shIoim2Cgw/UAfIOm3aD7BoMVdCBz0+neYEuMvPMjaPDRKcvaSd5Rpp/rZhUX8zKlyZixrGqT9fuXHzuNp4joESTH16NMoL1sM3HFMaZkjyUaVIdR0UqSdVItlZocQzh42l4mYp9ZtWwmav1UbBcNtKxfiXOuGr0X4Zc5pLlHYZ8Jj6lXJsc6dPciBSXYekuVkFOXg3aPuguDbb5zGNBR+qyFuaGITU02pqb1a57WVKP4Hg7L1nc0rasa1KUhDg1s8005ODryS+gja6ywZPomnj8E1u0IQgjH+tp5bE+Le41xR8xmtUY91nlf4CAV6nGbeGlYQAiLEBjxlp2icPmeh76MmddD4rOUGATemXNO1ycxMNBgEfMiqsLDRvClzXVLrLBcrjBsO1rRNqYHao8UmnV8mhUOlWmIRtHsbtvYEGsgWVbnWB/eaaoVsGM0XW+umC54PmBId1gnFrQA1Ei1zfpGxqV5U/9Bg+FyNFblDENNZ3/QfTkm8Nsmp89M0xj+FITP8FD1Y/6MUoyKZpeC6/Y1XppoGw+NXsqExL4MyC2/1dJRAS5SiAFSQq0whn7TjjF5RASOhRAEshzQmHeQl2zthuNRAOKt2NZkZ4rNpwm/PWKIGQ4FY+HRoPTWN+iTxoQWV5oQTnL/9+wsE6P+qToA0eYSf6OtLQeBjkAWtK4o5VDOaTNEkXKhrXBnZMYRsFaeMoWC5XlURNqGhcG85qPaZRuOAhkFKSNaCicU1GcGVQ31L4jXwaZAye/KZD41pwVkP9piX/42Czd0qjOQaO3s/xPT3161GqKbaONpxL4MfxIO411KevsrGbasHZhBuPbaH+/it8Q6p0lEs4G3fiZhX1FUhY7JUOcwFnDpjeQf1kJHyHAZ31Kp1nCXxjnLSttdSHlkRdsTXUUHw90VQosslwY9EVcdPIp+Nr6+P5jbt6astFTjhXvpmOr61F40FYNG4sEOOiwSh042wPvsWdInFrxeX++tVtuWCkYflFz9icbUNP1KdHLmd74UDTT2vrXIOeoL5vp36l0DRtMN9QzOOtmI8zrcCtT55lsxBmewrPrMOZ9yRNmK+gV/T8G6rQSs6ObiBBAAAAAElFTkSuQmCC" alt=""></button>
+                            <span>Suggest Foods</span>
+                        </div>
+                        <div id="i"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAQAAAAkGDomAAAAAmJLR0QAAKqNIzIAAATGSURBVGjezZtdbFRFFIC/vSltla0u3aUPGJKKtiCwjUog0cS2BEQTjQ82BASNVWMiEl+NLzSrpNrnaqzGX5QHeTAmmqAPmmiiiYooqQJtlW6jYSMtlG0bSilN14ft2u6cuXf3/u105mFz786c89079845c+bcCP5KE0lupZFGGohxMwnmyJJlgguMMEKafs5hoNzEft7nH3Jl1DTvsZeVlYO7m3eYLgttaZ2kj2TYaNU8wU+u0ZbW79lHVThwcVKM+YIr1AxdrAoWLsKzXA4ErlBH6QwOL+lzWO3qD9wRBN5uroaClyPHNA+XHjynYvEaL5aQcJ2fOc0AA/zLRS6RI0GcNaxnA5vYxgrH3jm66SLn7d7dyJeO1z9EinZqHGXU0s7LDDnK+ZxaL3ir+c1W5DivupzTNtPDuK28E9S7xbuNERthIzzPDR5H5ICt1L9odCNqLee1Yubp9QhXKCvpZV4r+2/WlCukgWGbe9cayLTVanMfB4mX072WU9ruR4kG6Gp8pNVxspzX5U1Nx7kg5/2F0smcRlNvqW67tH7IzlCs+04mNdocdSUYFR1m2Baad7SVGaFvjIR9h481V7Q7VAeuQ6PxiF3j7ZrGh0N3f1/RaL1H13AF50TD4yVsdbFVLa7lu3Jfib4DOqf2BdHsd1cTi1dAiHJa9D6oNqoStmOeO10NlXdAaBHWJaPew6eFgj6Xz5IfQOgT/TuLn4M/lb+zrlcN/gBjZIXhc3x/U67fRn+AkBIS7lv8U7WMU8QqDhhjSpHwwaILpK46ejzMZ34BoUfYsIVoxB4hfJ2JaArrBEcHWCC8vF8YNgI4zEnlTJse8BimyicSEOLixrYYA2wRLFHpAV7GZFEDLPdbNCtNvjEK+LVy3CwBzxgFPFsacNAooKq9uUqsRoc8is65ivrYFVX7LRZ1yqmLRu+gqr1OAk4ZBVS110W4RnXRqRpmDQ5xNdeKjmctEb+zjN5BVXuVRVasEEwWVfuExaQ66kYBVe2TEjBhFDAuATPKqSajgKrZyFhy7l5WgIMScJNRwI3S9O0IyN3yvyYBRKB9B9QL0UljgEkhpd5inH6l2YPGBvgB5fgPxi3gO+X0Y8YA9ynH3+Z/OgJZdvof4tt1y878wn1mWS7cry6mERwRoY9oxQFl6GNJKLhViO+qOGCXkNBa7Gqrs2GsooCrxIJTMSCmA5hvif5PKo4hGREC3lAxwI0iBJyWYfSDms29SgXRB0Xv52SzGs0eZ2W2IY5rtiG0iQTtRjZyDmu03mvX+Kim8SOh4u3RaPzQvnmDJq9gmi2h4W3RbCaOOm9rP6S5oiuhbcde0WjbVaqbfkP7qcDxPG5oQy392u36TwNcMUc5ptXxqxLlsCmrSdskVbQFgtdmI7/MpAqAtcKuFKzLG77TUl73n5YCTok9aQ6YT+zJD7RzatRmV9ICT43KX/EXJZPLtgeQXPaZU7ZMqfS8bl4qcRmznOAMZxfS88aIECfxf3re1pLvZTeHPK+iAXhUM9tXMMGxvOdnWaeI5h+EZ7i0fJNsC5G7FBcCgTvPIQ8b5mWGuPfzo89h3RtWovdiuYu3l2uq/NJY8uMuPjZ41/vHBhGfoE200Fj0ucZ1JsiSZTSYzzX+AxR/bQWgqxHaAAAAAElFTkSuQmCC" width="80" height="80"  style="width: 20px; height: 20px; opacity: 0.5;"></div>
+                    </div>
+                </div>
+
+               <!-- Nutrition score -->
+
+               <div id="nutscore">
+
+
+                <div id="score">
+                    <span>Nutrition Score</span>
+                    <div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAQAAAAkGDomAAAAAmJLR0QAAKqNIzIAAATGSURBVGjezZtdbFRFFIC/vSltla0u3aUPGJKKtiCwjUog0cS2BEQTjQ82BASNVWMiEl+NLzSrpNrnaqzGX5QHeTAmmqAPmmiiiYooqQJtlW6jYSMtlG0bSilN14ft2u6cuXf3/u105mFz786c89079845c+bcCP5KE0lupZFGGohxMwnmyJJlgguMMEKafs5hoNzEft7nH3Jl1DTvsZeVlYO7m3eYLgttaZ2kj2TYaNU8wU+u0ZbW79lHVThwcVKM+YIr1AxdrAoWLsKzXA4ErlBH6QwOL+lzWO3qD9wRBN5uroaClyPHNA+XHjynYvEaL5aQcJ2fOc0AA/zLRS6RI0GcNaxnA5vYxgrH3jm66SLn7d7dyJeO1z9EinZqHGXU0s7LDDnK+ZxaL3ir+c1W5DivupzTNtPDuK28E9S7xbuNERthIzzPDR5H5ICt1L9odCNqLee1Yubp9QhXKCvpZV4r+2/WlCukgWGbe9cayLTVanMfB4mX072WU9ruR4kG6Gp8pNVxspzX5U1Nx7kg5/2F0smcRlNvqW67tH7IzlCs+04mNdocdSUYFR1m2Baad7SVGaFvjIR9h481V7Q7VAeuQ6PxiF3j7ZrGh0N3f1/RaL1H13AF50TD4yVsdbFVLa7lu3Jfib4DOqf2BdHsd1cTi1dAiHJa9D6oNqoStmOeO10NlXdAaBHWJaPew6eFgj6Xz5IfQOgT/TuLn4M/lb+zrlcN/gBjZIXhc3x/U67fRn+AkBIS7lv8U7WMU8QqDhhjSpHwwaILpK46ejzMZ34BoUfYsIVoxB4hfJ2JaArrBEcHWCC8vF8YNgI4zEnlTJse8BimyicSEOLixrYYA2wRLFHpAV7GZFEDLPdbNCtNvjEK+LVy3CwBzxgFPFsacNAooKq9uUqsRoc8is65ivrYFVX7LRZ1yqmLRu+gqr1OAk4ZBVS110W4RnXRqRpmDQ5xNdeKjmctEb+zjN5BVXuVRVasEEwWVfuExaQ66kYBVe2TEjBhFDAuATPKqSajgKrZyFhy7l5WgIMScJNRwI3S9O0IyN3yvyYBRKB9B9QL0UljgEkhpd5inH6l2YPGBvgB5fgPxi3gO+X0Y8YA9ynH3+Z/OgJZdvof4tt1y878wn1mWS7cry6mERwRoY9oxQFl6GNJKLhViO+qOGCXkNBa7Gqrs2GsooCrxIJTMSCmA5hvif5PKo4hGREC3lAxwI0iBJyWYfSDms29SgXRB0Xv52SzGs0eZ2W2IY5rtiG0iQTtRjZyDmu03mvX+Kim8SOh4u3RaPzQvnmDJq9gmi2h4W3RbCaOOm9rP6S5oiuhbcde0WjbVaqbfkP7qcDxPG5oQy392u36TwNcMUc5ptXxqxLlsCmrSdskVbQFgtdmI7/MpAqAtcKuFKzLG77TUl73n5YCTok9aQ6YT+zJD7RzatRmV9ICT43KX/EXJZPLtgeQXPaZU7ZMqfS8bl4qcRmznOAMZxfS88aIECfxf3re1pLvZTeHPK+iAXhUM9tXMMGxvOdnWaeI5h+EZ7i0fJNsC5G7FBcCgTvPIQ8b5mWGuPfzo89h3RtWovdiuYu3l2uq/NJY8uMuPjZ41/vHBhGfoE200Fj0ucZ1JsiSZTSYzzX+AxR/bQWgqxHaAAAAAElFTkSuQmCC" alt="" width="80" height="80"  style="width: 20px; height: 20px; opacity: 0.5;"></div>
+                </div>
+
+
+                <div id="targetimg">
+                    <div></div>
+                    <img src="https://cdn1.cronometer.com/2020/scores/NutritionScores_BannerGoldA.png" alt="">
+                </div>
+               </div>
+            </div>
+         </div>
+    </div>
+</body>
+</html>
