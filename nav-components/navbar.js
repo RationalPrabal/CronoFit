@@ -1,8 +1,6 @@
 const navbar=()=>{
 
     return `
-    
-
     <div>
         <img src="https://cdn1.cronometer.com/2021/landing/cronometer-logo.svg" alt="">
     </div>
