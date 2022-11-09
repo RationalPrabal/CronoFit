@@ -2,6 +2,7 @@
     height: 90px;
     width: 100%;
     display: flex;
+    margin-bottom: 70px;
 }
 #navbar>div{
     height: 90%;
@@ -18,6 +19,10 @@ text-decoration: none;
 color: black;
 font-size: 18px;
 }
+#nav-c a:hover{
+color: #f27f44;
+}
+
 #nav-c button{
 border: 1px solid 
 #f27f44;
