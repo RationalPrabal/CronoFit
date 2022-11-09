@@ -1,0 +1,39 @@
+#navbar{
+    height: 90px;
+    width: 100%;
+    display: flex;
+}
+#navbar>div{
+    height: 90%;
+    width: 50%;
+
+}
+#nav-c{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+#nav-c a{
+text-decoration: none;
+color: black;
+font-size: 18px;
+}
+#nav-c button{
+border: 1px solid 
+#f27f44;
+width: 140px;
+height:40px;
+margin-top: 10px;
+background-color: white;
+color: #f27f44;
+
+font-weight: bold;
+border-radius: 10px;
+cursor: pointer;
+}
+#navbar>div>img{
+    height: 90%;
+    width: 40%;
+    padding-left: 20px;
+    
+}
