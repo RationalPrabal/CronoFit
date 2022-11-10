@@ -24,16 +24,16 @@
     </div>
     <div id="details">
       <h3>Your Body Type</h3>
-      <div>
-        <form action="/action_page.php">
-          <span>Sex:</span>
-          <input type="radio" id="male" name="male" value="Male" />
+      <div id="sex">
+        <!-- <form action="/action_page.php" id="sex"> -->
+        <span>Sex:</span>
+        <input type="radio" id="male" name="male" value="Male" />
 
-          <span>Male</span>
-          <input type="radio" id="female" name="female" value="Female" />
+        <span>Male</span>
+        <input type="radio" id="female" name="female" value="Female" />
 
-          <span>Female</span>
-        </form>
+        <span>Female</span>
+        <!-- </form> -->
       </div>
       <div>
         <span>Born:</span>
@@ -126,7 +126,7 @@
         </select>
       </div>
     </div>
-    <button id="submit" onclick="getdata()">Create account</button>
+    <button id="submit" onclick="getData()">Create account</button>
   </body>
 </html>
-<script src="./scripts/signup.js"></script>
+<script src="./register.js"></script>
