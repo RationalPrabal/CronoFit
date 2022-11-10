@@ -160,4 +160,55 @@ font-weight: bold;
 margin-top: 59px;
 }
 
+#sync{
+ 
+   height: auto;
+   text-align: center;
+   font-size: 22px;
+   margin: auto;
+width: 70%;
+margin-top: 100px;
+margin-bottom: 80px;
+color: rgb(99, 95, 95);
+}
+#corono-reviews{
+
+
+    height: auto;
+    width: 90%;
+    font-size: 23px;
+    margin: auto;
+
+    text-align: center;
+    color: rgb(99, 95, 95);
+
+    border-radius: 5px;
+    
+}
+#review1{
+height: auto;
+    display: flex;
+    margin-bottom: 90px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#review1>div{
+width: 50%;
+height: auto;
+text-align: left;
+margin-bottom: 20px;
+padding-right: 30px;
+
+}
+#c-pro{
+    display: flex;
+}
+#c-pro>div{
+    height: 350px;
+    width: 50%;
+    font-size: 26px;
+    padding-left: 20px;
+    text-align: center;
+ 
+
+}
 
