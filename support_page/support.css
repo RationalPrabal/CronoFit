@@ -1,0 +1,42 @@
+img {
+    max-height: 37px;
+}
+
+img {
+    border: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: rgba(249, 80, 29, 1);
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+}
+
+.blocks-item {
+    border: 1px solid rgba(249, 80, 29, 1);
+    text-decoration: none;
+    
+}
+
+h4 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+.blocks-item{
+    display: grid;
+    
+}
