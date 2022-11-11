@@ -212,3 +212,12 @@ padding-right: 30px;
 
 }
 
+#about-us{
+    margin: auto;
+ margin-top: 100px;
+    height: auto;
+    text-align: center;
+    color: grey;
+    font-size: 25px;
+    width: 33%;
+}
