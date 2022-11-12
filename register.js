@@ -19,7 +19,7 @@ class User {
 
 const getData = () => {
   let email = document.getElementById("email").value;
-  let pass = document.getElementById("pass").value;
+  let password = document.getElementById("pass").value;
   let confirm_pass = document.getElementById("confirm_pass").value;
   let male = document.getElementById("male");
   let female = document.getElementById("female");
@@ -36,8 +36,8 @@ const getData = () => {
   } else {
     alert("Enter Email");
   }
-  if (pass == confirm_pass) {
-    password = pass;
+  if (password == confirm_pass) {
+    password = password;
   } else {
     alert("Password doesn't match");
   }
@@ -72,7 +72,7 @@ const getData = () => {
   if (
     email.length > 0 &&
     password.length > 0 &&
-    (male.checked == true || female.checked == true) &&
+    (male == null || female == null) &&
     year != "" &&
     wt.length != 0 &&
     inch.length != 0
@@ -81,7 +81,7 @@ const getData = () => {
     // console.log(users);
 
     localStorage.setItem("user", JSON.stringify(users));
-
+    window.location.href = "./login.html";
     alert("signup successfull");
   } else {
     alert("Fill input properly");

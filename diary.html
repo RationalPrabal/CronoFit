@@ -6,27 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/diary.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/userloginnavbar.css">
+    <link rel="stylesheet" href="./styles/userloginfooter.css">
 <body>
     <div id="navbar">
-        <div id="logo">
-            <img src="https://cdn1.cronometer.com/logos/cronometer-logo-orange.png" alt="" id="icon">
-        </div>
-        <ul id="navArea">
-            <li>Diary</li>
-            <li>Trends</li>
-            <li>Foods</li>
-            <li>Settings</li>
-            <li><a href="plans.html" style="text-decoration:none;color:rgb(225, 95, 44)">Plans</a></li>
-            <li><a href="help.html" style="text-decoration:none;color:rgb(225, 95, 44)">Help</a></li>
-        </ul>
+        
     </div>
+
+    <!-- container -->
     <div id="container">
          <div id="child1">
             <div id="calendar"></div>
             <div id="ad"></div>
-            <div id="energychart"></div>
-            <div id="weightchart"></div>
+
+            <!-- energychart -->
+            <div id="energychart">
+                <div id="enetitle">
+                    Energy History(kcal)
+                </div>
+
+                <div id="energylines"></div>
+
+                <div id="energyinput">
+                    <select name="Burned" id="selectcategory" >
+                        <option value="Consumed">Consumed</option>
+                        <option value="Burned">Burned</option>
+                        <option value="Net">Net</option>
+                        <option value="Combined">Combined</option>
+                    </select>
+                    <select name="" id="duration">
+                        <option value="Last 7 days">Last 7 days</option>
+                        <option value="Last 2 weeks">Last 2 weeks</option>
+                        <option value="Last 4 weeks">Last 4 weeks</option>
+                        <option value="Last 8 weeks">Last 8 weeks</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- weightchart -->
+            <div id="weightchart">
+                <div id="weightchange">
+                    Weight Change:0.0 kg
+                </div>
+
+                <div id="weightlines">
+                    
+                </div>
+
+                <div id="weightselect">
+                    <div></div>
+          <select name="" id="wselect">
+            <option value="Last 7 days">Last 7 days</option>
+            <option value="Last 2 weeks">Last 2 weeks</option>
+            <option value="Last 3 weeks">Last 3 weeks</option>
+            <option value="Last 4 weeks">Last 4 weeks</option>
+            <option value="Last 8 weeks">Last 8 weeks</option>
+            <option value="Last 3 months">Last 3 months</option>
+            <option value="Last 6 months">Last 6 months</option>
+            <option value="Last year">Last year</option>
+            <option value="All Time">All Time</option>
+          </select>
+          <div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAABaklEQVR4Xu3azU3DQBAG0LlxoQXIhRKhBkQJUASUACVAJwgJceLHI+VCVpGdeM0Y6T3pk1DivcxhY3a/CAAAAAAAgPU5G3I15GnI6zb5d36W37GQ0yEPQ76GfO9JfpfP5LN0dDLkJdqB70s+m2vo5C7aIY8l19DBxZDPaAc8llyTa5npOtrhTk2uZabnaAc7NflbwEwf0Q52at6D2d6iHezU5FpmsgUVu4l2sFOTa5lpE8e/hp4HXdxGO+Cx+EesozxWOOS3wFHEAvKA7T7GD+PyGYdxC8p9/TJ+H0c/bj+z5wMAACxAL6iIXlAhvaBiekGF9IKK6QUVO+QiZjcu5TvQCyqmF1TMFlRML6jYJo5/DXVH3IleUDG9oBXQC1oJvSAAAIA/phdURC+okF5QMb2gQnpBxfSCih1yEbMbl/Id6AUV0wsqZgsqphdUbBPHv4a6I+5EL6iYXtAK6AWthF4QAAAAAADwr/wAXpVUQUN5zAgAAAAASUVORK5CYII=" alt=""></div>
+                </div>
+            </div>
          </div>
 
 
@@ -60,22 +103,85 @@
 
             <div id="description">
                 <table id="destable">
-                    
-                    <th>
-                        <td>
-                            <div>Description</div>
-                        </td>
-                        <td>Amount</td>
-                        <td>Unit</td>
+                    <thead >
+                        <td style="color: black;">Description</td>
+                        <td style="color: black; text-align: end;padding-right: 15px;">Amount</td>
+                        <td style="text-align: start;">Unit</td>
                         <td>Energy(kcal)</td>
-                    </th>
+                    </thead>
                 </table>
             </div> 
 
-            <!-- Energy Summary -->
+            <!-- Energy siv-->
             <div id="energydiv">
-                <div id="energysum"></div>
-                <div id="macro"></div>
+
+                <!-- energy summary -->
+                <div id="energysum">
+                    <div id="energysumtitle">
+                       <span>Energy Summary</span>
+                       <div class="ibtn">
+                        <img class="macroimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAQAAAAkGDomAAAAAmJLR0QAAKqNIzIAAATGSURBVGjezZtdbFRFFIC/vSltla0u3aUPGJKKtiCwjUog0cS2BEQTjQ82BASNVWMiEl+NLzSrpNrnaqzGX5QHeTAmmqAPmmiiiYooqQJtlW6jYSMtlG0bSilN14ft2u6cuXf3/u105mFz786c89079845c+bcCP5KE0lupZFGGohxMwnmyJJlgguMMEKafs5hoNzEft7nH3Jl1DTvsZeVlYO7m3eYLgttaZ2kj2TYaNU8wU+u0ZbW79lHVThwcVKM+YIr1AxdrAoWLsKzXA4ErlBH6QwOL+lzWO3qD9wRBN5uroaClyPHNA+XHjynYvEaL5aQcJ2fOc0AA/zLRS6RI0GcNaxnA5vYxgrH3jm66SLn7d7dyJeO1z9EinZqHGXU0s7LDDnK+ZxaL3ir+c1W5DivupzTNtPDuK28E9S7xbuNERthIzzPDR5H5ICt1L9odCNqLee1Yubp9QhXKCvpZV4r+2/WlCukgWGbe9cayLTVanMfB4mX072WU9ruR4kG6Gp8pNVxspzX5U1Nx7kg5/2F0smcRlNvqW67tH7IzlCs+04mNdocdSUYFR1m2Baad7SVGaFvjIR9h481V7Q7VAeuQ6PxiF3j7ZrGh0N3f1/RaL1H13AF50TD4yVsdbFVLa7lu3Jfib4DOqf2BdHsd1cTi1dAiHJa9D6oNqoStmOeO10NlXdAaBHWJaPew6eFgj6Xz5IfQOgT/TuLn4M/lb+zrlcN/gBjZIXhc3x/U67fRn+AkBIS7lv8U7WMU8QqDhhjSpHwwaILpK46ejzMZ34BoUfYsIVoxB4hfJ2JaArrBEcHWCC8vF8YNgI4zEnlTJse8BimyicSEOLixrYYA2wRLFHpAV7GZFEDLPdbNCtNvjEK+LVy3CwBzxgFPFsacNAooKq9uUqsRoc8is65ivrYFVX7LRZ1yqmLRu+gqr1OAk4ZBVS110W4RnXRqRpmDQ5xNdeKjmctEb+zjN5BVXuVRVasEEwWVfuExaQ66kYBVe2TEjBhFDAuATPKqSajgKrZyFhy7l5WgIMScJNRwI3S9O0IyN3yvyYBRKB9B9QL0UljgEkhpd5inH6l2YPGBvgB5fgPxi3gO+X0Y8YA9ynH3+Z/OgJZdvof4tt1y878wn1mWS7cry6mERwRoY9oxQFl6GNJKLhViO+qOGCXkNBa7Gqrs2GsooCrxIJTMSCmA5hvif5PKo4hGREC3lAxwI0iBJyWYfSDms29SgXRB0Xv52SzGs0eZ2W2IY5rtiG0iQTtRjZyDmu03mvX+Kim8SOh4u3RaPzQvnmDJq9gmi2h4W3RbCaOOm9rP6S5oiuhbcde0WjbVaqbfkP7qcDxPG5oQy392u36TwNcMUc5ptXxqxLlsCmrSdskVbQFgtdmI7/MpAqAtcKuFKzLG77TUl73n5YCTok9aQ6YT+zJD7RzatRmV9ICT43KX/EXJZPLtgeQXPaZU7ZMqfS8bl4qcRmznOAMZxfS88aIECfxf3re1pLvZTeHPK+iAXhUM9tXMMGxvOdnWaeI5h+EZ7i0fJNsC5G7FBcCgTvPIQ8b5mWGuPfzo89h3RtWovdiuYu3l2uq/NJY8uMuPjZ41/vHBhGfoE200Fj0ucZ1JsiSZTSYzzX+AxR/bQWgqxHaAAAAAElFTkSuQmCC" alt="" style="opacity: 0.5;">
+                       </div>
+                    </div>
+                    <div id="energysumcharts">
+                          
+                         <div class="consumed">
+                            <div class="circleouter">
+                                <div id="consumed">
+                                    <div>0</div>
+                                    <div>kcal</div>
+                                </div>
+                            </div>
+                                
+                                <div>CONSUMED</div>
+                            </div>
+                          
+                            <div class="consumed">
+                                <div class="circleouter">
+                                    <div id="burned">
+                                        <div>2310</div>
+                                        <div>kcal</div>
+                                    </div>
+                                </div>
+                                    
+                                    <div>BURNED</div>
+                                </div>
+
+                                <div class="consumed">
+                                    <div class="circleouter">
+                                        <div id="budget">
+                                            <div>2310</div>
+                                            <div>calories Remaining</div>
+                                        </div>
+                                    </div>
+                                        
+                                        <div>BUDGET</div>
+                                    </div>
+                    </div>
+                </div>
+
+                <div id="macro">
+                    <div id="mtargets">
+                        <div>Macronutrient Targets</div>
+                        <div class="ibtn"><img class="macroimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAQAAAAkGDomAAAAAmJLR0QAAKqNIzIAAATGSURBVGjezZtdbFRFFIC/vSltla0u3aUPGJKKtiCwjUog0cS2BEQTjQ82BASNVWMiEl+NLzSrpNrnaqzGX5QHeTAmmqAPmmiiiYooqQJtlW6jYSMtlG0bSilN14ft2u6cuXf3/u105mFz786c89079845c+bcCP5KE0lupZFGGohxMwnmyJJlgguMMEKafs5hoNzEft7nH3Jl1DTvsZeVlYO7m3eYLgttaZ2kj2TYaNU8wU+u0ZbW79lHVThwcVKM+YIr1AxdrAoWLsKzXA4ErlBH6QwOL+lzWO3qD9wRBN5uroaClyPHNA+XHjynYvEaL5aQcJ2fOc0AA/zLRS6RI0GcNaxnA5vYxgrH3jm66SLn7d7dyJeO1z9EinZqHGXU0s7LDDnK+ZxaL3ir+c1W5DivupzTNtPDuK28E9S7xbuNERthIzzPDR5H5ICt1L9odCNqLee1Yubp9QhXKCvpZV4r+2/WlCukgWGbe9cayLTVanMfB4mX072WU9ruR4kG6Gp8pNVxspzX5U1Nx7kg5/2F0smcRlNvqW67tH7IzlCs+04mNdocdSUYFR1m2Baad7SVGaFvjIR9h481V7Q7VAeuQ6PxiF3j7ZrGh0N3f1/RaL1H13AF50TD4yVsdbFVLa7lu3Jfib4DOqf2BdHsd1cTi1dAiHJa9D6oNqoStmOeO10NlXdAaBHWJaPew6eFgj6Xz5IfQOgT/TuLn4M/lb+zrlcN/gBjZIXhc3x/U67fRn+AkBIS7lv8U7WMU8QqDhhjSpHwwaILpK46ejzMZ34BoUfYsIVoxB4hfJ2JaArrBEcHWCC8vF8YNgI4zEnlTJse8BimyicSEOLixrYYA2wRLFHpAV7GZFEDLPdbNCtNvjEK+LVy3CwBzxgFPFsacNAooKq9uUqsRoc8is65ivrYFVX7LRZ1yqmLRu+gqr1OAk4ZBVS110W4RnXRqRpmDQ5xNdeKjmctEb+zjN5BVXuVRVasEEwWVfuExaQ66kYBVe2TEjBhFDAuATPKqSajgKrZyFhy7l5WgIMScJNRwI3S9O0IyN3yvyYBRKB9B9QL0UljgEkhpd5inH6l2YPGBvgB5fgPxi3gO+X0Y8YA9ynH3+Z/OgJZdvof4tt1y878wn1mWS7cry6mERwRoY9oxQFl6GNJKLhViO+qOGCXkNBa7Gqrs2GsooCrxIJTMSCmA5hvif5PKo4hGREC3lAxwI0iBJyWYfSDms29SgXRB0Xv52SzGs0eZ2W2IY5rtiG0iQTtRjZyDmu03mvX+Kim8SOh4u3RaPzQvnmDJq9gmi2h4W3RbCaOOm9rP6S5oiuhbcde0WjbVaqbfkP7qcDxPG5oQy392u36TwNcMUc5ptXxqxLlsCmrSdskVbQFgtdmI7/MpAqAtcKuFKzLG77TUl73n5YCTok9aQ6YT+zJD7RzatRmV9ICT43KX/EXJZPLtgeQXPaZU7ZMqfS8bl4qcRmznOAMZxfS88aIECfxf3re1pLvZTeHPK+iAXhUM9tXMMGxvOdnWaeI5h+EZ7i0fJNsC5G7FBcCgTvPIQ8b5mWGuPfzo89h3RtWovdiuYu3l2uq/NJY8uMuPjZ41/vHBhGfoE200Fj0ucZ1JsiSZTSYzzX+AxR/bQWgqxHaAAAAAElFTkSuQmCC" alt="" style="opacity: 0.5;"></div>
+                    </div>
+                    <div class="macrodivs">
+                        <div>Energy</div>
+                        <div>0.0kcal/2310kcal(0%)</div>
+                    </div>
+                    <div class="macrodivs">
+                        <div>Protein</div>
+                        <div>0.0g/144.4g(0%)</div>
+                    </div>
+                    <div class="macrodivs">
+                        <div>Net Carbs</div>
+                        <div>0.0g/259.9g(0%)</div>
+                    </div>
+                    <div class="macrodivs">
+                        <div>Fat</div>
+                        <div>0.0g/77.0g(0%)</div>
+                    </div>
+                </div>
             </div>
 
 
@@ -106,12 +212,528 @@
 
 
                 <div id="targetimg">
-                    <div></div>
+                    <!-- circle -->
+                    <div class="circlediv">
+                        <div class="circle">
+                            <div>0%</div>
+                            <div>All Targets</div>
+                        </div>
+                        
+                    </div>
                     <img src="https://cdn1.cronometer.com/2020/scores/NutritionScores_BannerGoldA.png" alt="">
+                </div>
+               </div>
+
+               <!-- highlightednutrients -->
+
+               <div id="highlight">
+                <div id="highnutrients">
+                    <span>Highlighted Nutrients</span>
+                </div>
+                <div id="nutrientrow">
+                    <div class="circlediv">
+                        <div class="circle">
+                            <div>0%</div>
+                            <div>Fibre</div>
+                        </div>
+                        
+                    </div>
+                    <div class="circlediv">
+                        <div class="circle">
+                            <div>0%</div>
+                            <div>Iron</div>
+                        </div>
+                        
+                    </div>
+                    <div class="circlediv">
+                        <div class="circle">
+                            <div>0%</div>
+                            <div>Calcium</div>
+                        </div>
+                        
+                    </div>
+                    <div class="circlediv">
+                        <div class="circle">
+                            <div>0%</div>
+                            <div>Vit.A</div>
+                        </div>
+                        
+                    </div>
+                    <div class="circlediv">
+                        <div class="circle">
+                            <div>0%</div>
+                            <div>Vit.C</div>
+                        </div>
+                        
+                    </div>
+                    <div class="circlediv">
+                        <div class="circle">
+                            <div>0%</div>
+                            <div>Vit.B12</div>
+                        </div>
+                        
+                    </div>
+                    <div class="circlediv">
+                        <div class="circle">
+                            <div>0%</div>
+                            <div>Folate</div>
+                        </div>
+                        
+                    </div>
+                    <div class="circlediv">
+                        <div class="circle">
+                            <div>0%</div>
+                            <div>Potassium</div>
+                        </div>
+                        
+                    </div>
+                </div>
+               </div>
+
+               <!-- tables -->
+
+               <div id="elementtable">
+
+                <div id="t1">
+                    <div id="general">
+                        <table >
+                            <th style="color: black;border-bottom: 1px solid rgb(164, 164, 164);" colspan="3" >
+                                General
+                            </th>
+                            <tr>
+                                <td>Energy</td>
+                                <td>- kcal</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Alcohol</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">No Target</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Caffine</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">No Target</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Water</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                        </table>
+                     </div>
+
+                     <!-- carbohydrates -->
+
+                     <div id="carbohydrates">
+                        <table>
+                            <th style="color: black;border-bottom: 1px solid rgb(164, 164, 164);" colspan="3" >
+                                Carbohydrates
+                            </th>
+                            <tr>
+                                <td>Carbs</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Fiber</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Starch</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">No Target</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sugar</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">No Target</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Net Carbs</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                        </table>
+                     </div>
+
+
+                     <!-- Lipids -->
+
+
+                     <div id="lipids">
+                        <table>
+                            <th style="color: black;border-bottom: 1px solid rgb(164, 164, 164);" colspan="3" >
+                                Lipids
+                            </th>
+                            <tr>
+                                <td>Fat</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Monosaturated</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">No Target</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Polyunsaturated</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">No Target</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Omega-3</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Omega-6</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Saturated</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">n/a</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Trans-Fats</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">n/a</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cholestrol</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">No Target</div>
+                                </td>
+                            </tr>
+                        </table>
+                     </div>
+
+
+                     <!-- Proteins -->
+                     <div id="proteins">
+                        <table>
+                            <th style="color: black;border-bottom: 1px solid rgb(164, 164, 164);" colspan="3" >
+                                Protein
+                            </th>
+                            <tr>
+                                <td>Protein</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cystine</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Histidine</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Isoleucine</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Leucine</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lysine</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Methionine</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Phenylalanine</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Threonine</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tryptophan</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tyrosine</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Valine</td>
+                                <td>- g</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                        </table>
+                     </div>
+                </div>
+
+
+
+                <div id="t2">
+
+                    <!-- vitamins -->
+                    <div id="vitamins">
+                        <table>
+                            <th style="color: black;border-bottom: 1px solid rgb(164, 164, 164);" colspan="3" >
+                                Vitamins
+                            </th>
+                            <tr>
+                                <td>B1 (Thimaine)</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>B2 (Riboflavin)</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>B3 (Niacin)</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>B5 (Pantothenic Acid)</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>B6 (Pyridoxine)</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>B12 (Cobalamin)</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Folate</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Vitamin A</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Vitamin C</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Vitamin D</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Vitamin E</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Vitamin K</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                    <!-- Minerals -->
+
+                    <div id="minerals">
+                        <table>
+                            <th style="color: black;border-bottom: 1px solid rgb(164, 164, 164);" colspan="3" >
+                                Minerals
+                            </th>
+                            <tr>
+                                <td>Calcium</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Copper</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Iron</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Magnesium</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mangnese</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Phosphorus</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Potassium</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Selenium</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sodium</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Zinc</td>
+                                <td>- mg</td>
+                                <td>
+                                    <div class="third">0%</div>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                    </div>
                 </div>
                </div>
             </div>
          </div>
     </div>
+
+
+    <!-- footer -->
+    <div id="footer">
+       
+    </div>
+
+
+    <div id="support">
+        
+    </div>
 </body>
 </html>
+
+<script type="module" src="./scripts/diary.js"></script>
