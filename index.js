@@ -8,8 +8,7 @@ let div=document.getElementById ("navbar")
 div.innerHTML=navbar()
 
 
-let footer_div=document.getElementById("footer")
-footer_div.innerHTML=footer();
+
 
 
 const directToHome=()=>{
