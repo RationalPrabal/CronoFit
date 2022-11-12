@@ -221,3 +221,7 @@ padding-right: 30px;
     font-size: 25px;
     width: 33%;
 }
+.we:hover{
+
+    transform: scale(1.1);
+}
