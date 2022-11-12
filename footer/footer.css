@@ -1,0 +1,51 @@
+#footer{
+  
+    height: auto;
+    width: 100%;
+    background-color: 
+    #4f4e53;
+    color: white;
+}
+#logo{
+    display: flex;
+    width: 250px;
+    margin: auto;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 50px;
+
+}
+#logo>div{
+    height: 45px;
+    width: 20%;
+    margin-top: 50px;
+
+
+}
+#logo>div>img{
+height: 100%;
+width: 100%;
+}
+#footer-sections{
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 16px;
+}
+#footer-sections>div{
+height: 100%;
+width: 20%;
+}
+#footer-sections>div>p{
+font-size: 18px;
+cursor: pointer;
+}
+#footer-sections>div>p:hover{
+color: orange;
+}
+
+
+

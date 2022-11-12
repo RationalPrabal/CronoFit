@@ -1,0 +1,223 @@
+#mobile{
+    display: flex;
+    height: 400px;
+    width: 90%;
+
+    margin: auto;
+}
+#mobile>div{
+    width: 50%;
+    height: 100%;
+}
+#mobile>div>img{
+height: 100%;
+width: 100%;
+/* transition: transform .2s; */
+}
+
+
+
+.fade_image { animation: fadeIn 7s; }
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+#mobile>div h1{
+font-size: 40px;
+color: rgb(84, 77, 77);
+}
+#mobile>div h2{
+font-weight: 100;
+font-size: 30px;
+color: rgb(84, 77, 77);
+
+}
+#mobile>div button{
+background-color: 
+#f27f44;
+color: white;
+width: 50%;
+height: 50px;
+border-radius: 10px;
+font-size: 20px;
+border: #f27f44;
+/* font-weight: bold; */
+}
+
+#seen{
+    display: flex;
+    margin: auto;
+    width: 80%;
+    gap: 10px;
+}
+#seen>div{
+    height: 90px;
+    width: 30%;
+}
+#seen>div>img{
+height: 50%;
+width: 90%;
+}
+#download{
+display: flex;
+width: 30%;
+margin: auto;
+margin-bottom: 100px;
+}
+#download>div>img{
+
+height: 100%;
+width: 90%;
+}
+#disc{
+    margin: auto;
+    height: 700px;
+    width: 100%;
+    text-align: center;
+    background-color: #f3f5ed;
+    color: rgb(84, 77, 77);
+
+
+}
+#discover{
+    display: flex;
+    width: 89%;
+    margin: auto;
+}
+#discover p{
+font-size: 20px;
+}
+
+#discover>div{
+height: 400px;
+width: 30%;
+margin: auto;
+margin-top: 70px;
+
+
+}
+#discover>div>img{
+display: block;margin: auto;
+height: 80px;
+width: 80px;
+margin-top: 20px;
+}
+
+#habbits{
+    height: 400px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 300px;
+    gap: 10px;
+}
+#habbits>div{
+width: 90%;
+text-align: center;
+height: auto;
+color: rgb(84, 77, 77);
+font-size: 20px;
+margin-top: 20px;
+
+
+
+}
+
+
+#habbits>div>h2{
+font-size: 30;
+}
+
+#habbits>div>img{
+display: block;
+margin: auto;
+height: 90px;
+width: 70px;
+}
+#signup{
+    height: 300px;
+    text-align: center;
+font-size: 18px;
+text-align: center;
+color: rgb(84, 77, 77);
+background-color: #f3f5ed;
+
+
+
+}
+#signup>button{
+width: 25%;
+height: 50px;
+background-color:#f27f44;
+border: 1px solid #f27f44;
+border-radius: 10px;
+color: white;
+font-weight: bold;
+margin-top: 59px;
+}
+
+#sync{
+ 
+   height: auto;
+   text-align: center;
+   font-size: 22px;
+   margin: auto;
+width: 70%;
+margin-top: 100px;
+margin-bottom: 80px;
+color: rgb(99, 95, 95);
+}
+#corono-reviews{
+
+
+    height: auto;
+    width: 90%;
+    font-size: 23px;
+    margin: auto;
+
+    text-align: center;
+    color: rgb(99, 95, 95);
+
+    border-radius: 5px;
+    
+}
+#review1{
+height: auto;
+    display: flex;
+    margin-bottom: 90px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#review1>div{
+width: 50%;
+height: auto;
+text-align: left;
+margin-bottom: 20px;
+padding-right: 30px;
+
+}
+#c-pro{
+    display: flex;
+}
+#c-pro>div{
+    height: 350px;
+    width: 50%;
+    font-size: 26px;
+    padding-left: 20px;
+    text-align: center;
+ 
+
+}
+
+#about-us{
+    margin: auto;
+ margin-top: 100px;
+    height: auto;
+    text-align: center;
+    color: grey;
+    font-size: 25px;
+    width: 33%;
+}
