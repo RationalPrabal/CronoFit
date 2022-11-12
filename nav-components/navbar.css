@@ -12,9 +12,11 @@
 #navbar>div {
     height: 90%;
     width: 50%;
-
+  
 }
-
+#navbar>:nth-child(1)>img{
+    cursor: pointer;
+}
 #nav-c {
     display: flex;
     justify-content: space-evenly;
