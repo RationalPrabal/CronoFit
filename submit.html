@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="submit.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="https://theme.zdassets.com/theme_assets/197219/111fe6921e8b22116b39eaa745ea08e38a718e0d.png" alt="">
+        <a href="">Submit a request</a>
+    </div>
+    <div class="content-divider"></div>
+    <div class="container">
+       
+        <nav class="sub-nav">
+            <ol class="breadcrumbs">
+                <li title="Cronometer">
+                    <a href="">Cronometer</a>
+                </li>
+                <li>Submit a request</li>
+            </ol>
+
+            <form class="search"><input name="utf8" type="hidden" value="✓" autocomplete="off"><input type="search" id="query" placeholder="Search" aria-label="Search"></form>
+        </nav>
+
+        <h1>
+            Submit a request
+        </h1>
+
+        <div class="form">
+            <form id="new_request" class="request-form" data-form="" data-form-type="request"
+                action="/hc/en-us/requests" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden"
+                    value="✓" autocomplete="off"><input type="hidden" name="authenticity_token"
+                    value="hc:requests:client:SvMMDGoo81Tj1t-qJfHdqqDYbWG1N6M1bG4LplKBzm2A3Jxo8fPd3Xu5SfaXkSwHC0r0K-52sdzVbnpM_FNLkA"
+                    data-hc-status="ready">
+                <div class="form-field string required request_anonymous_requester_email"><label
+                        for="request_anonymous_requester_email">Your email address</label>
+                    <input type="text" name="request[anonymous_requester_email]" id="request_anonymous_requester_email"
+                        aria-required="true">
+                </div>
+                <div class="form-field string  required  request_subject">
+                    <label id="request_subject_label" for="request_subject">Subject</label>
+                    <input type="text" name="request[subject]" id="request_subject" maxlength="150" size="150"
+                        aria-required="true" aria-labelledby="request_subject_label">
+                </div>
+
+
+                <div class="suggestion-list" data-hc-class="searchbox" data-hc-suggestion-list="true"></div>
+                <div class="form-field text  required  request_description">
+                    <label id="request_description_label">Description</label>
+                    <!-- <textarea name="request[description]" id="request_description" aria-required="true"
+                        aria-describedby="request_description_hint"
+                        aria-labelledby="request_description_label"></textarea><input type="hidden"
+                        name="request[description_mimetype]" id="request_description_mimetype" value="text/plain"
+                        style="display: none;" autocomplete="off"> -->
+                        <input type="text">
+
+                    <p id="request_description_hint">Please enter the details of your request. A member of our support
+                        staff will respond as soon as possible.</p>
+                </div>
+
+
+
+
+
+
+                <div class="form-field">
+                    <label for="request-attachments">
+                        Attachments
+                    </label>
+                    <div id="upload-dropzone" class="upload-dropzone">
+                        <input type="file" multiple="true" id="request-attachments" data-fileupload="true"
+                            data-dropzone="upload-dropzone" data-error="upload-error"
+                            data-create-url="/hc/en-us/request_uploads" data-name="request[attachments][]"
+                            data-pool="request-attachments-pool" data-delete-confirm-msg=""
+                            aria-describedby="upload-error">
+                        <span>
+                            <a>Add file</a> or drop files here
+                        </span>
+                    </div>
+
+                    <div id="upload-error" class="notification notification-error notification-inline"
+                        style="display: none;">
+                        <span data-upload-error-message=""></span>
+                    </div>
+
+                    <ul id="request-attachments-pool" class="upload-pool" data-template="upload-template"></ul>
+
+                </div>
+
+                <footer><input type="submit" name="commit" value="Submit"></footer>
+
+            </form>
+
+
+
+        </div>
+    </div>
+    
+</body>
+
+</html>

@@ -1,3 +1,4 @@
-let nav_bar=document.querySelector(".navbar");
-import{navbar} from "/spotless-thumb-400\nav-components\navbar.js";
+import { navbar } from "./navbar.js";
+let nav_bar=document.getElementById("navbar");
+
 nav_bar.innerHTML=navbar();

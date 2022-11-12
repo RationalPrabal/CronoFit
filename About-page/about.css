@@ -26,7 +26,10 @@
 }
 .about_last{
     text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
     border-top: 1px solid #4f4e53;
+    
 }
 h5{
     
@@ -68,3 +71,8 @@ h6{
     letter-spacing: 2px;
     text-transform: uppercase;
 }
+/* #border{
+   
+    padding-left: 24%;
+    padding-right: 24%;
+} */
