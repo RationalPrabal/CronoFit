@@ -10,7 +10,7 @@ const navbar=()=>{
   <p><a href="blog.html">Blog</p></a>
   <p><a href=" ">Forums</p></a>
   <p><a href="about.html">About</p></a>
-  <button>Log In</button>
+  <a href="login.html"><button>Log In</button></a>
 
 
 
