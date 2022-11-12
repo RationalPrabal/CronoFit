@@ -3,6 +3,7 @@
     height:60px;
     border-bottom: 1px solid rgb(210, 210, 210);
     display: flex;
+    font-family: sans-serif;
 }
 
 #logo{
@@ -18,7 +19,7 @@
 #icon{
     width: 77%;
 }
-ul{
+#navArea{
     display: flex;
     /* border: 1px solid blue; */
     width: 37%;
@@ -31,7 +32,7 @@ ul{
     align-items: flex-end;
 }
 
-li{
+#navArea>div{
     /* border: 1px solid rgb(210, 209, 209); */
     border-bottom: none;
     border-radius: 2px;
