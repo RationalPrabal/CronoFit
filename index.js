@@ -11,9 +11,8 @@ div.innerHTML=navbar()
 let footer_div=document.getElementById("footer")
 footer_div.innerHTML=footer()
 
-let image=document.querySelector(".site-logo")
-image.addEventListener("click",function(){
-
+const directToHome=()=>{
     window.location.href="index.html"
-
-})
+    }
+    
+    document.querySelector("#navbar>:nth-child(1)>img").addEventListener("click", directToHome);
