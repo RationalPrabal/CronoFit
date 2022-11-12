@@ -1,5 +1,7 @@
 /*footer*/
-
+#footer{
+    font-family: sans-serif;
+}
 #footer>:nth-child(1){
     width: 40%;
     height: 5%;
