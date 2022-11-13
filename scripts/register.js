@@ -82,7 +82,7 @@ const getData = () => {
 
     localStorage.setItem("user", JSON.stringify(users));
     window.location.href = "./login.html";
-    alert("signup successfull");
+    alert("Signup Successfull on Crono-fit");
   } else {
     alert("Fill input properly");
   }

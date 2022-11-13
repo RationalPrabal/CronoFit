@@ -30,7 +30,7 @@ function signingin(login) {
   login.forEach(function (el) {
     if (el.email == email && el.pass == pass) {
       flag = true;
-      alert("Login Successful");
+      alert("Welcome to the Crono-fit");
       window.location.href = "diary.html";
     }
   });
