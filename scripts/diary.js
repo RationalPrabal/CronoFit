@@ -19,7 +19,7 @@ document.getElementById('addbutton').addEventListener('click',addfood)
 async function addfood(){
  document.getElementById('addfood').style.visibility = "visible"
 
- let res = await fetch ("http://localhost:3000/all")
+ let res = await fetch ("http://localhost:8080/all")
     let data = await res.json()
   
     appendtoitemlist(data)
@@ -44,7 +44,7 @@ function hideaddfooddiv(){
 
 async function all(){
     
-    let res = await fetch ("http://localhost:3000/all")
+    let res = await fetch ("http://localhost:8080/all")
     let data = await res.json()
   console.log(data)
     appendtoitemlist(data)
@@ -63,7 +63,7 @@ commonfood.addEventListener('click',commonfoodfun)
 
 async function commonfoodfun(){
     
-    let res = await fetch ("http://localhost:3000/all")
+    let res = await fetch ("http://localhost:8080/all")
     let data = await res.json()
   
     appendtoitemlist(data)
@@ -80,9 +80,11 @@ function appendtoitemlist(data){
 
     data.forEach(function(el){
         let tr = document.createElement('tr')
-
+        let obj = el
         let td1 = document.createElement('td')
         td1.innerText = el.td1
+        let id = el.id
+        
         td1.style.color = "black"
         td1.style.textAlign = 'start'
         td1.style.font = '10px'
@@ -96,14 +98,89 @@ function appendtoitemlist(data){
 
         td2.innerText = el.td2
         td2.style.color = "black"
-        
+       
 
         td2.append(image)
         tr.append(td1,td2)
+        tr.addEventListener('click',function(){
+            tr.style.backgroundColor = "rgb(199,199,215)"
+            let  addtodesbtn = document.getElementById("addtodesbtn")
 
+            addtodesbtn.style.display = "flex"
+            
+            addtodesbtn.addEventListener('click',function(){
+                sendthedata(obj,id)
+            })
+
+        })
         document.getElementById("itemtbody").append(tr)
     })
 }
 
 
+async function sendthedata(obj){
+    let res =   await fetch (`http://localhost:8080/sentdata`,{
+        method:"POST",
+        body: JSON.stringify(obj),
 
+        headers:{
+            'Content-Type': 'application/json'
+        }
+      })
+      
+    let data = await res.json()
+
+    
+      
+      
+}
+appedtodes()
+async function appedtodes(){
+    document.getElementById('destbody').innerHTML = null
+    let res= await fetch (`http://localhost:8080/sentdata`)
+    let data = await res.json()
+    console.log(data)
+    data.forEach(function(el){
+        let tr = document.createElement('tr')
+        let id = el.id
+        let td1 = document.createElement('td')
+        td1.innerText = el.td1
+    td1.style.color = 'black'
+        let td2 = document.createElement('td')
+        td2.innerText = el.amount
+        td2.style.textAlign = 'end'
+        td2.style.paddingRight = '10px'
+        td2.style.color = 'black'
+        let td3 = document.createElement('td')
+         td3.innerText = el.unit
+         td3.style.textAlign = 'start'
+         td3.style.paddingLeft = '10px'
+         let td4 = document.createElement('td')
+         td4.innerText = el.calorie
+
+         let td5 = document.createElement('td')
+         td5.innerText = "-"
+         td5.addEventListener('click',function(){
+          remove(id)
+         })
+         tr.append(td1,td2,td3,td4,td5)
+         console.log(tr)
+        let destbody = document.getElementById('destbody')
+         destbody.append(tr)
+    })
+}
+
+async function remove(id){
+
+    let res = await fetch(`http://localhost:8080/sentdata/${id}`,{
+        method:"DELETE",
+        headers:{
+            'Content-Type': 'application/json'
+        }
+
+    })
+
+    let data = await res.json();
+
+    appedtodes(data)
+}

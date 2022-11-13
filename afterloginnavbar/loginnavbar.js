@@ -3,7 +3,7 @@ function navbar(){
 
     return `
     <div id="logo">
-            <img src="https://cdn1.cronometer.com/logos/cronometer-logo-orange.png" alt="" id="icon">
+            <img src="cronofit.png" alt="" id="icon">
         </div>
         <div id="navArea">
             <div><a href="diary.html" style="text-decoration:none;color:rgb(225, 95, 44)">Diary</a></div>
