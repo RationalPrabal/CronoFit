@@ -10,3 +10,16 @@ document.getElementById("blog").addEventListener('click',gotoblog)
 function gotoblog(){
     window.open("blog.html")
 }
+
+//changing gold div values
+document.getElementById('annual').addEventListener('change',changevalue1)
+
+document.getElementById('monthly').addEventListener('change',changevalue2)
+
+function changevalue1(){
+    document.getElementById('dollar').innerText = "$49.99"
+}
+
+function changevalue2(){
+    document.getElementById('dollar').innerText = "$8.99"
+}

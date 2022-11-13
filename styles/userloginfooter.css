@@ -1,5 +1,7 @@
 /*footer*/
-
+#footer{
+    font-family: sans-serif;
+}
 #footer>:nth-child(1){
     width: 40%;
     height: 5%;
@@ -87,7 +89,10 @@
 #footerlogo{
     height: 50%;
     width: 15%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #socialmedia{
@@ -158,4 +163,10 @@ justify-content: center;
     color: white;
     font-weight: 600;
     font-size: 14px;
+}
+
+#footericon{
+    width: 75%;
+    height: 80%;
+    border-radius: 5px;
 }

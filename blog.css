@@ -4,7 +4,7 @@
     text-align: center;
     padding-bottom: 50px;
    position: relative;
-   
+   padding-bottom: 8%;
  
 }
 #top_div>:nth-child(1){
@@ -13,7 +13,7 @@
     font-size: 49px;
     line-height: 62px;
     color: #ffffff;
-
+   
 }
 
 
@@ -52,7 +52,7 @@
     border-radius: 10px;
   
     background-color: #ffffff;
-   
+   padding-bottom: 5%;
 }
 #video-div>:nth-child(1){
     margin-top: 30px;

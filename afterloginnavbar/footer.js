@@ -38,7 +38,9 @@ function footer(){
          <img src="https://cdn1.cronometer.com/logos/google-play.png" alt="">
      </div>
     </div>
-    <div id="footerlogo"></div>
+    <div id="footerlogo">
+    <img src="cronofit.png" alt="" id="footericon">
+    </div>
     <div id="socialmedia">
      <div>
          <a href="https://www.facebook.com/" target="_blank">
