@@ -119,10 +119,32 @@ calendar */
 
 #energylines{
     height: 70%;
-    width: 100%;
+    width: 85%;
+    margin: auto;
     /* border: 1px solid brown; */
     box-sizing: border-box;
 
+}
+
+#energylines>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20%;
+    /* border: 1px solid red; */
+}
+
+#energylines>div>span{
+    font-size: 12px;
+}
+
+.hr{
+    width: 80%;
+}
+
+.hr>hr{
+    border: none;
+    border-bottom: 1px solid gray;
 }
 
 #energyinput{
@@ -171,11 +193,24 @@ calendar */
 }
 
 #weightlines{
-    width: 100%;
+    width: 85%;
     height: 78%;
+    margin: auto;
     /* border: 1px solid brown; */
 }
 
+#weightlines>div{
+    display: flex;
+    height: 18%;
+    /* border: 1px solid red; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#weightlines>div>span{
+font-size: 12px;
+}
 #weightselect{
     display: flex;
     width: 100%;
@@ -801,6 +836,7 @@ height: auto;
     background-color: #fff;
     overflow: hidden;
     visibility: hidden;
+    
 }
 
 #addfoodtitle{
@@ -996,3 +1032,9 @@ justify-content: center;
     display: none;
 }
 
+.removebtn:hover{
+    cursor: pointer;
+    color: red;
+    transform: scale(2);
+    
+}

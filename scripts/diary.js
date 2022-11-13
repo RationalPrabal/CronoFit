@@ -19,7 +19,7 @@ document.getElementById('addbutton').addEventListener('click',addfood)
 async function addfood(){
  document.getElementById('addfood').style.visibility = "visible"
 
- let res = await fetch ("http://localhost:8080/all")
+ let res = await fetch ("http://localhost:3000/all")
     let data = await res.json()
   
     appendtoitemlist(data)
@@ -44,7 +44,7 @@ function hideaddfooddiv(){
 
 async function all(){
     
-    let res = await fetch ("http://localhost:8080/all")
+    let res = await fetch ("http://localhost:3000/all")
     let data = await res.json()
   console.log(data)
     appendtoitemlist(data)
@@ -63,7 +63,7 @@ commonfood.addEventListener('click',commonfoodfun)
 
 async function commonfoodfun(){
     
-    let res = await fetch ("http://localhost:8080/all")
+    let res = await fetch ("http://localhost:3000/all")
     let data = await res.json()
   
     appendtoitemlist(data)
@@ -119,7 +119,7 @@ function appendtoitemlist(data){
 
 
 async function sendthedata(obj){
-    let res =   await fetch (`http://localhost:8080/sentdata`,{
+    let res =   await fetch (`http://localhost:3000/sentdata`,{
         method:"POST",
         body: JSON.stringify(obj),
 
@@ -137,7 +137,7 @@ async function sendthedata(obj){
 appedtodes()
 async function appedtodes(){
     document.getElementById('destbody').innerHTML = null
-    let res= await fetch (`http://localhost:8080/sentdata`)
+    let res= await fetch (`http://localhost:3000/sentdata`)
     let data = await res.json()
     console.log(data)
     data.forEach(function(el){
@@ -160,6 +160,7 @@ async function appedtodes(){
 
          let td5 = document.createElement('td')
          td5.innerText = "-"
+         td5.className = "removebtn"
          td5.addEventListener('click',function(){
           remove(id)
          })
@@ -172,7 +173,7 @@ async function appedtodes(){
 
 async function remove(id){
 
-    let res = await fetch(`http://localhost:8080/sentdata/${id}`,{
+    let res = await fetch(`http://localhost:3000/sentdata/${id}`,{
         method:"DELETE",
         headers:{
             'Content-Type': 'application/json'
