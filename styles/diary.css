@@ -59,36 +59,32 @@ calendar */
 
 #calendar{
     width: 100%;
-    height: 23.5%;
+    height: auto;
     border: 1px solid rgb(201, 201, 201); 
-    margin-bottom: 12px;
+    
     border-radius: 5px; 
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    
 }
 
-.calendar_date{
-    display: grid;
-    grid-template-columns: repeat(7,1fr);
-    grid-gap: 10px;
+#datevalue{
+    width: 100%;
+    height:10%;
+    /* border: 1px solid red; */
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px ;
     box-sizing: border-box;
+    color: orangered;
+    font-weight: 700;
 }
 
-.calendar_day{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 12%;
+#date{
+    margin-bottom: 15%;
 }
-
-.calendar_number{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 25px;
-}
-
 
 /* ad */
 
@@ -291,23 +287,29 @@ height: 60%;
     margin-top: 1%;
     border-radius: 5px;
 }
-
 #destable{
+    width: 100%;
+    border-collapse: collapse;
+}
+#destable thead{
     width: 100%;
     height: 10%;
     background-color: rgb(237, 237, 237);
-    border-bottom: 1px solid rgb(169, 169, 169);
+    
 
 }
+
+#destable tbody>:nth-child(odd) {background: rgb(240, 240, 240)}
 #1sttd{
     width: 5%;
 }
 
 #destable td{
 /* border: 1px solid red; */
-width: 30%;
+width: 21%;
 text-align: center;
 box-sizing: border-box;
+
 }
 
 /*energy summary*/
@@ -978,4 +980,19 @@ justify-content: center;
     margin-left: 5px;
 }
 
+#addtodesbtn{
+    width: 17%;
+    /* border: 1px solid red; */
+    height: 30px;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: rgb(255,118,63);
+    font-size: 18px;
+    display: none;
+}
 

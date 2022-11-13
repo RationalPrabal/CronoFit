@@ -23,7 +23,10 @@
 
             <!-- calendar -->
             <div id="calendar">
-               
+                <div id="datevalue"><span class="chev">&#x3c;</span> <span>November 13, 2020</span>  <span class=" chev">&#x3e;</span> </div>
+                
+                
+                
             </div>
             <div id="ad"></div>
 
@@ -116,14 +119,19 @@
             <!-- description -->
 
             <div id="description">
-                <table id="destable">
-                    <thead>
-                        <td style="color: black;">Description</td>
+                <table id="destable" >
+                    <thead >
+                        <td style="color: black;width: 30%;">Description</td>
                         <td style="color: black; text-align: end;padding-right: 15px;">Amount</td>
                         <td style="text-align: start;">Unit</td>
                         <td>Energy(kcal)</td>
+                        <td ></td>
                     </thead>
+                    <tbody id="destbody" >
+                    
+                    </tbody>
                 </table>
+                
             </div>
 
             <!-- Energy siv-->
@@ -798,6 +806,8 @@
                 </tbody>
             </table>
         </div>
+
+        <div id="addtodesbtn">Add</div>
     </div>
 
     <!-- footer -->
@@ -814,4 +824,3 @@
 </html>
 
 <script type="module" src="./scripts/diary.js"></script>
-<script src="./scripts/moment.js"></script>
