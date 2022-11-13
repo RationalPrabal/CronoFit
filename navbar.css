@@ -15,7 +15,18 @@
     width: 50%;
   
 }
-
+#navbarimage{
+    width: 20%;
+margin-left: 2%;
+ height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.site-logo{
+    width: 100%;
+    border-radius: 5px;
+}
 #nav-c {
     display: flex;
     justify-content: space-evenly;
