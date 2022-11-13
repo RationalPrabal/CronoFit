@@ -836,6 +836,7 @@ height: auto;
     background-color: #fff;
     overflow: hidden;
     visibility: hidden;
+    
 }
 
 #addfoodtitle{
@@ -1031,3 +1032,9 @@ justify-content: center;
     display: none;
 }
 
+.removebtn:hover{
+    cursor: pointer;
+    color: red;
+    transform: scale(2);
+    
+}

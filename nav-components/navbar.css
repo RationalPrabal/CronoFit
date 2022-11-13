@@ -6,6 +6,7 @@
     justify-content: space-between;
 
     margin-bottom: 70px;
+    box-shadow: rgba(214, 214, 214, 0.24) 0px 3px 8px;
 
 }
 
@@ -13,6 +14,21 @@
     height: 90%;
     width: 50%;
 
+}
+
+#navbarimg{
+    width: 20%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3%;
+}
+
+#navbarimg>img{
+    width: 100%;
+    border-radius: 5px;
 }
 
 #nav-c {
