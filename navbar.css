@@ -14,8 +14,20 @@
     width: 50%;
   
 }
-#navbar>:nth-child(1)>img{
-    cursor: pointer;
+
+
+#navbarimg{
+    width: 20%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3%;
+}
+#navbarimg>img{
+    width: 100%;
+    border-radius: 5px;
 }
 #nav-c {
     display: flex;
@@ -70,5 +82,4 @@ cursor: pointer;
 }
 
     
-
 

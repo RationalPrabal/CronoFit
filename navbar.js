@@ -2,7 +2,7 @@ const navbar=()=>{
 
     return `
     <div>
-      <img class="site-logo" src="https://cdn1.cronometer.com/2021/landing/cronometer-logo.svg" alt="">
+      <img class="site-logo" src="cronofit.png" alt="">
     </div>
     <div id="nav-c">
   <p> <a href=" ">Products</p></a> 
