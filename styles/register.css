@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-top: 50px;
 }
 
 #nav>a {
@@ -21,6 +21,7 @@
 #nav img {
     height: 15%;
     width: 55%;
+    border-radius: 10px;
 }
 
 #user_datails,

@@ -15,17 +15,6 @@ document.querySelector("#sup").addEventListener("click", function () {
 let login = JSON.parse(localStorage.getItem("user"));
 
 document.querySelector("#login").addEventListener("click", function () {
-  //   let present = 1
-  //   login.forEach(function(elem){
-  //     if(email==elem.email && pass ==elem.password){
-  //         alert("Login Succsesful");
-  //         window.location.href = "index.html";
-  //     }
-  //     else{
-  //         alert("incorrect Email or Password");
-  //     }
-  //   });
-  //braj verma
   signingin(login);
 });
 
@@ -41,8 +30,8 @@ function signingin(login) {
   login.forEach(function (el) {
     if (el.email == email && el.pass == pass) {
       flag = true;
-      alert("Login Successful");
-      // window.location.href = "index.html";
+      alert("Welcome to the Crono-fit");
+      window.location.href = "diary.html";
     }
   });
   if (flag == false) {

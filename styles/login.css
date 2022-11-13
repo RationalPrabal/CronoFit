@@ -19,6 +19,7 @@
     margin: auto;
     margin-top: 10px;
     margin-bottom: 40px;
+    border-radius: 10px;
 }
 
 input {
@@ -148,6 +149,14 @@ footer {
     margin-left: 80px;
     margin-top: 10px;
     font-size: 12px;
+}
+
+#login {
+    background-color: #27ae60;
+}
+
+#login:hover {
+    background-color: red;
 }
 
 .copy:hover {
