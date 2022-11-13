@@ -46,6 +46,8 @@ cursor: pointer;
 #footer-sections>div>p:hover{
 color: orange;
 }
-
+#footer-logo{
+    border-radius: 5px;
+}
 
 

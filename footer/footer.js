@@ -30,7 +30,7 @@ const footer = () => {
 
 <div id="footer-sections">
 <div>
-    <img height="70px" width="100%" src="https://cdn1.cronometer.com/2021/landing/crono-logo-white.svg" alt="">
+    <img id="footer-logo" height="70px" width="70%" src="cronofit.png" alt="">
 </div>
 <div>
     <h2>Cronometer</h2>

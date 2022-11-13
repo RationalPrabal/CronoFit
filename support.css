@@ -37,7 +37,10 @@ a {
     text-decoration: none;
     
 }
-
+.navbar>img{
+    border-radius: 5px ;
+    cursor: pointer;
+}
 h4 {
     text-align: center;
 }
