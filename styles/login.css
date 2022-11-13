@@ -152,11 +152,12 @@ footer {
 }
 
 #login {
-    background-color: #27ae60;
+    background-color: rgb(54, 54, 242);
+    color: white;
 }
 
 #login:hover {
-    background-color: red;
+    background-color: rgb(247, 115, 115);
 }
 
 .copy:hover {

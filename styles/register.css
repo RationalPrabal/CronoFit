@@ -85,9 +85,13 @@ h3 {
     padding: 13px 13px;
     margin-left: 30%;
     font-size: 18px;
-    background-color: #67ac5b;
+    background-color: rgb(54, 54, 242);
     color: white;
     font-weight: bold;
     border: none;
     border-radius: 5px;
+}
+
+#submit:hover {
+    background-color: rgb(247, 115, 115);
 }
