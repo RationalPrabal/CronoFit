@@ -401,38 +401,5 @@
       "amount": "100"
     }
   ],
-  "sentdata": [
-    {
-      "id": 2,
-      "td1": "Avocado,Black Skin",
-      "td2": "NCCDB",
-      "calorie": "300",
-      "unit": "2",
-      "amount": "100"
-    },
-    {
-      "id": 4,
-      "td1": "Tomato Raw, Includes Cherry,Grape,Roma",
-      "td2": "NCCDB",
-      "calorie": "300",
-      "unit": "2",
-      "amount": "100"
-    },
-    {
-      "id": 22,
-      "td1": "Butter,Salted",
-      "td2": "NCCDB",
-      "calorie": "300",
-      "unit": "2",
-      "amount": "100"
-    },
-    {
-      "id": 25,
-      "td1": "Broccoli,Raw",
-      "td2": "NCCDB",
-      "calorie": "300",
-      "unit": "2",
-      "amount": "100"
-    }
-  ]
+  "sentdata": []
 }
