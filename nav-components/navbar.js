@@ -6,7 +6,7 @@ const navbar=()=>{
       
     </div>
     <div id="nav-c">
-  <p> <a href=" ">Products</p></a> 
+  <p> <a href="">Products</p></a> 
   <p><a href=" ">Support</p></a>
   <p><a href=" ">Blog</p></a>
   <p><a href=" ">Forums</p></a>

@@ -11,3 +11,12 @@ nav.innerHTML=navbar();
 
 // let footer_div= document.getElementById("footer_div");
 // footer_div.innerHTML= footer();
+
+
+
+
+const directToHome=()=>{
+window.location.href="index.html"
+}
+
+document.querySelector("#navbar>:nth-child(1)>img").addEventListener("click", directToHome);
