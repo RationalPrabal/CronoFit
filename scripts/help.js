@@ -11,3 +11,9 @@ function gotoblog(){
     window.open("blog.html")
 }
 
+let icon = document.getElementById("icon")
+icon.addEventListener('click',redirect)
+
+function redirect(){
+    window.location.href = 'index.html'
+}

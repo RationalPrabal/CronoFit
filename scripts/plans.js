@@ -23,3 +23,11 @@ function changevalue1(){
 function changevalue2(){
     document.getElementById('dollar').innerText = "$8.99"
 }
+
+
+let icon = document.getElementById("icon")
+icon.addEventListener('click',redirect)
+
+function redirect(){
+    window.location.href = 'index.html'
+}

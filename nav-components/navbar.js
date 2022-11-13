@@ -2,7 +2,7 @@ const navbar=()=>{
 
     return `
     <div>
-    <div id="navbarimg"><img class="site-logo" src="cronofit.png" alt=""></div>
+    <<img class="site-logo" src="cronofit.png" alt="">
       
     </div>
     <div id="nav-c">

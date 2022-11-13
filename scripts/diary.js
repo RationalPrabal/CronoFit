@@ -5,6 +5,14 @@ document.getElementById("navbar").innerHTML =  navbar()
 document.getElementById("footer").innerHTML = footer()
 document.getElementById("support").innerHTML = support()
 
+let icon = document.getElementById("icon")
+icon.addEventListener('click',redirect)
+
+function redirect(){
+    window.location.href = 'index.html'
+}
+
+
 document.getElementById("blog").addEventListener('click',gotoblog)
 
 function gotoblog(){
