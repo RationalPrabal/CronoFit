@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
 }
+
 .navbar {
     margin: 0% 3% 3% 3%;
     display: flex;
@@ -11,6 +12,7 @@
     border-top: 1px solid #ddd;
     margin-top: 20px;
 }
+
 body {
     background-color: #FFFFFF;
     color: #333333;
@@ -26,8 +28,9 @@ body {
     margin: 5px 0;
 }
 .navbar {
-    /* display: flex;
-   
+
+    display: flex;
+ 
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 2%;
@@ -38,8 +41,13 @@ body {
     align-items: center;
     display: flex;
     height: 71px;
-    justify-content: space-between; */
+
+    justify-content: space-between;
+    
 }
+
+
+
 
 
 
@@ -55,6 +63,11 @@ element.style {
         width: 90%;
     }
 
+}
+
+.container{
+    width: 100%;
+    border-top: 1px solid #333333;
 }
 
 .sub-nav{
