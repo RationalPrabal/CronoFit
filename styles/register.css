@@ -95,3 +95,12 @@ h3 {
 #submit:hover {
     background-color: rgb(247, 115, 115);
 }
+
+#notification {
+    margin-top: 5px;
+    margin-left: 450px;
+    color: red;
+    font-weight: bold;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -11,6 +11,7 @@
     border: 1px solid white;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 100px;
 }
 
 .img {
@@ -196,4 +197,13 @@ footer {
 #supdiv>input {
     width: 90%;
     height: 20px;
+}
+
+#notification {
+    margin-top: 10px;
+    margin-left: 50px;
+    color: red;
+    font-weight: bold;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

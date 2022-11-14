@@ -16,8 +16,9 @@ class User {
     users.push(this);
   }
 }
-
+let note = document.getElementById("notification");
 const getData = () => {
+  note.innerHTML = null;
   let email = document.getElementById("email").value;
   let password = document.getElementById("pass").value;
   let confirm_pass = document.getElementById("confirm_pass").value;
@@ -31,18 +32,22 @@ const getData = () => {
   let cm = document.getElementById("cm").value;
   let wt = document.getElementById("wt").value;
   let unit = document.getElementById("units").value;
+
   if (email.length > 0) {
     email = email;
   } else {
-    alert("Enter Email");
+    note.innerText = "Enter Email";
+    // alert("Enter Email");
   }
   if (password == confirm_pass) {
     password = password;
   } else {
-    alert("Password doesn't match");
+    note.innerText = "Password doesn't match";
+    // alert("Password doesn't match");
   }
   if (male.checked == true && female.checked == true) {
-    alert("Select only one Gender");
+    note.innerText = "Select only one Gender";
+    //alert("Select only one Gender");
   } else if (male.checked == true) {
     gender = "Male";
     female = null;
@@ -50,11 +55,13 @@ const getData = () => {
     gender = "Female";
     male = null;
   } else {
-    alert("Select Gender");
+    note.innerText = "Select Gender";
+    //alert("Select Gender");
   }
   let birth_date;
   if (year == "") {
-    alert("Please Enter birth details");
+    note.innerText = "Please Enter birth details";
+    //alert("Please Enter birth details");
   } else {
     birth_date = date + "/" + month + "/" + year;
   }
@@ -64,7 +71,8 @@ const getData = () => {
     height = inch + " cm";
   }
   if (wt.length == 0) {
-    alert("Enter weight");
+    note.innerText = "Enter weight";
+    //alert("Enter weight");
   } else {
     weight = wt + " " + unit;
   }
@@ -82,8 +90,11 @@ const getData = () => {
 
     localStorage.setItem("user", JSON.stringify(users));
     window.location.href = "./login.html";
-    alert("Signup Successfull on Crono-fit");
+    note.innerText = "Signup Successfull on Crono-fit";
+    note.style.color = "blue";
+    // alert("Signup Successfull on Crono-fit");
   } else {
-    alert("Fill input properly");
+    note.innerText = "Fill input properly";
+    // alert("Fill input properly");
   }
 };

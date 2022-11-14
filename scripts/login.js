@@ -17,11 +17,14 @@ let login = JSON.parse(localStorage.getItem("user"));
 document.querySelector("#login").addEventListener("click", function () {
   signingin(login);
 });
+let note = document.getElementById("notification");
 
 function signingin(login) {
+  note.innerHTML = null;
   event.preventDefault();
   if (login.length == 0) {
-    alert("No user till now");
+    note.innerText = "No user till now";
+
     return;
   }
   let email = document.querySelector("#email").value;
@@ -30,11 +33,13 @@ function signingin(login) {
   login.forEach(function (el) {
     if (el.email == email && el.pass == pass) {
       flag = true;
-      alert("Welcome to the Crono-fit");
+      note.innerText = "Welcome to the Crono-fit";
+      // alert("Welcome to the Crono-fit");
       window.location.href = "diary.html";
     }
   });
   if (flag == false) {
-    alert("Fill right details");
+    note.innerText = "Fill right details";
+    // alert("Fill right details");
   }
 }
